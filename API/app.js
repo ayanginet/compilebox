@@ -1,9 +1,11 @@
-import express, { static } from 'express';
-import { createServer } from 'http';
-import { compilerArray } from './compilers';
-import sandBox from './DockerSandbox';
-import bodyParser from 'body-parser';
-import ExpressBrute, { MemoryStore } from 'express-brute';
+var express = require('express');
+var http = require('http');
+var compilerArray = require('./compilers');
+var sandBox = require('./DockerSandbox');
+var bodyParser = require('body-parser');
+
+var ExpressBrute = require('express-brute');
+var store = new ExpressBrute.MemoryStore();
 
 var store = new MemoryStore(); // stores state locally, don't use this in production
 var bruteforce = new ExpressBrute(store, {
