@@ -42,7 +42,7 @@ function random(size) {
 }
 
 
-app.post('/compile', bruteforce.prevent, function (req, res) {
+app.post('/compile', function (req, res) {
 
     var language = req.body.language;
     var code = req.body.code;
