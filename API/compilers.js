@@ -1,5 +1,4 @@
-
-export const compilerArray= [ ["python","file.py","","Python",""],
+exports.compilerArray= [ ["python","file.py","","Python",""],
 			 ["ruby","file.rb","","Ruby",""],
 			 ["clojure","file.clj","","Clojure",""],
 			 ["php","file.php","","Php",""],
