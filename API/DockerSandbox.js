@@ -209,4 +209,4 @@ class DockerSandbox {
     }
 }
 
-export default DockerSandbox;
+module.exports = DockerSandbox;
