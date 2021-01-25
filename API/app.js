@@ -1,12 +1,3 @@
-/*
-        *File: app.js
-        *Author: Asad Memon / Osman Ali Mian
-        *Last Modified: 5th June 2014
-        *Revised on: 30th June 2014 (Introduced Express-Brute for Bruteforce protection)
-*/
-
-
-
 
 var express = require('express');
 var http = require('http');
@@ -42,7 +33,7 @@ function random(size) {
 }
 
 
-app.post('/compile', function (req, res) {
+app.post('/compile', bruteforce.prevent, function (req, res) {
 
     var language = req.body.language;
     var code = req.body.code;
